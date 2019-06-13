@@ -45,6 +45,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -120,10 +126,46 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DevelopersController.cs" />
+    <Compile Include="Controllers\GamesController.cs" />
+    <Compile Include="Controllers\GenresController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PublishersController.cs" />
+    <Compile Include="Controllers\ReviewsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201906110029461_InitialCreate.cs" />
+    <Compile Include="Migrations\201906110029461_InitialCreate.Designer.cs">
+      <DependentUpon>201906110029461_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906110116277_Developers.cs" />
+    <Compile Include="Migrations\201906110116277_Developers.Designer.cs">
+      <DependentUpon>201906110116277_Developers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906110136157_Games.cs" />
+    <Compile Include="Migrations\201906110136157_Games.Designer.cs">
+      <DependentUpon>201906110136157_Games.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906110136589_Genres.cs" />
+    <Compile Include="Migrations\201906110136589_Genres.Designer.cs">
+      <DependentUpon>201906110136589_Genres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906110137153_Publishers.cs" />
+    <Compile Include="Migrations\201906110137153_Publishers.Designer.cs">
+      <DependentUpon>201906110137153_Publishers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906110137282_Reviews.cs" />
+    <Compile Include="Migrations\201906110137282_Reviews.Designer.cs">
+      <DependentUpon>201906110137282_Reviews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Developer.cs" />
+    <Compile Include="Models\Genre.cs" />
+    <Compile Include="Models\Publisher.cs" />
+    <Compile Include="Models\Game.cs" />
+    <Compile Include="Models\Review.cs" />
+    <Compile Include="Models\_200395689A1Context.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -162,10 +204,34 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Games\Create.cshtml" />
+    <Content Include="Views\Games\Delete.cshtml" />
+    <Content Include="Views\Games\Details.cshtml" />
+    <Content Include="Views\Games\Edit.cshtml" />
+    <Content Include="Views\Games\Index.cshtml" />
+    <Content Include="Views\Publishers\Create.cshtml" />
+    <Content Include="Views\Publishers\Delete.cshtml" />
+    <Content Include="Views\Publishers\Details.cshtml" />
+    <Content Include="Views\Publishers\Edit.cshtml" />
+    <Content Include="Views\Publishers\Index.cshtml" />
+    <Content Include="Views\Developers\Create.cshtml" />
+    <Content Include="Views\Developers\Delete.cshtml" />
+    <Content Include="Views\Developers\Details.cshtml" />
+    <Content Include="Views\Developers\Edit.cshtml" />
+    <Content Include="Views\Developers\Index.cshtml" />
+    <Content Include="Views\Genres\Create.cshtml" />
+    <Content Include="Views\Genres\Delete.cshtml" />
+    <Content Include="Views\Genres\Details.cshtml" />
+    <Content Include="Views\Genres\Edit.cshtml" />
+    <Content Include="Views\Genres\Index.cshtml" />
+    <Content Include="Views\Reviews\Create.cshtml" />
+    <Content Include="Views\Reviews\Delete.cshtml" />
+    <Content Include="Views\Reviews\Details.cshtml" />
+    <Content Include="Views\Reviews\Edit.cshtml" />
+    <Content Include="Views\Reviews\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -179,6 +245,26 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201906110029461_InitialCreate.resx">
+      <DependentUpon>201906110029461_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906110116277_Developers.resx">
+      <DependentUpon>201906110116277_Developers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906110136157_Games.resx">
+      <DependentUpon>201906110136157_Games.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906110136589_Genres.resx">
+      <DependentUpon>201906110136589_Genres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906110137153_Publishers.resx">
+      <DependentUpon>201906110137153_Publishers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906110137282_Reviews.resx">
+      <DependentUpon>201906110137282_Reviews.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
