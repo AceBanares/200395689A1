@@ -135,29 +135,25 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201906110029461_InitialCreate.cs" />
-    <Compile Include="Migrations\201906110029461_InitialCreate.Designer.cs">
-      <DependentUpon>201906110029461_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201906130431562_Developers.cs" />
+    <Compile Include="Migrations\201906130431562_Developers.Designer.cs">
+      <DependentUpon>201906130431562_Developers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201906110116277_Developers.cs" />
-    <Compile Include="Migrations\201906110116277_Developers.Designer.cs">
-      <DependentUpon>201906110116277_Developers.cs</DependentUpon>
+    <Compile Include="Migrations\201906130435435_Games.cs" />
+    <Compile Include="Migrations\201906130435435_Games.Designer.cs">
+      <DependentUpon>201906130435435_Games.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201906110136157_Games.cs" />
-    <Compile Include="Migrations\201906110136157_Games.Designer.cs">
-      <DependentUpon>201906110136157_Games.cs</DependentUpon>
+    <Compile Include="Migrations\201906130437460_Genres.cs" />
+    <Compile Include="Migrations\201906130437460_Genres.Designer.cs">
+      <DependentUpon>201906130437460_Genres.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201906110136589_Genres.cs" />
-    <Compile Include="Migrations\201906110136589_Genres.Designer.cs">
-      <DependentUpon>201906110136589_Genres.cs</DependentUpon>
+    <Compile Include="Migrations\201906130438018_Publishers.cs" />
+    <Compile Include="Migrations\201906130438018_Publishers.Designer.cs">
+      <DependentUpon>201906130438018_Publishers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201906110137153_Publishers.cs" />
-    <Compile Include="Migrations\201906110137153_Publishers.Designer.cs">
-      <DependentUpon>201906110137153_Publishers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201906110137282_Reviews.cs" />
-    <Compile Include="Migrations\201906110137282_Reviews.Designer.cs">
-      <DependentUpon>201906110137282_Reviews.cs</DependentUpon>
+    <Compile Include="Migrations\201906130438207_Reviews.cs" />
+    <Compile Include="Migrations\201906130438207_Reviews.Designer.cs">
+      <DependentUpon>201906130438207_Reviews.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Developer.cs" />
@@ -204,26 +200,26 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Games\Create.cshtml" />
-    <Content Include="Views\Games\Delete.cshtml" />
-    <Content Include="Views\Games\Details.cshtml" />
-    <Content Include="Views\Games\Edit.cshtml" />
-    <Content Include="Views\Games\Index.cshtml" />
-    <Content Include="Views\Publishers\Create.cshtml" />
-    <Content Include="Views\Publishers\Delete.cshtml" />
-    <Content Include="Views\Publishers\Details.cshtml" />
-    <Content Include="Views\Publishers\Edit.cshtml" />
-    <Content Include="Views\Publishers\Index.cshtml" />
     <Content Include="Views\Developers\Create.cshtml" />
     <Content Include="Views\Developers\Delete.cshtml" />
     <Content Include="Views\Developers\Details.cshtml" />
     <Content Include="Views\Developers\Edit.cshtml" />
     <Content Include="Views\Developers\Index.cshtml" />
+    <Content Include="Views\Games\Create.cshtml" />
+    <Content Include="Views\Games\Delete.cshtml" />
+    <Content Include="Views\Games\Details.cshtml" />
+    <Content Include="Views\Games\Edit.cshtml" />
+    <Content Include="Views\Games\Index.cshtml" />
     <Content Include="Views\Genres\Create.cshtml" />
     <Content Include="Views\Genres\Delete.cshtml" />
     <Content Include="Views\Genres\Details.cshtml" />
     <Content Include="Views\Genres\Edit.cshtml" />
     <Content Include="Views\Genres\Index.cshtml" />
+    <Content Include="Views\Publishers\Create.cshtml" />
+    <Content Include="Views\Publishers\Delete.cshtml" />
+    <Content Include="Views\Publishers\Details.cshtml" />
+    <Content Include="Views\Publishers\Edit.cshtml" />
+    <Content Include="Views\Publishers\Index.cshtml" />
     <Content Include="Views\Reviews\Create.cshtml" />
     <Content Include="Views\Reviews\Delete.cshtml" />
     <Content Include="Views\Reviews\Details.cshtml" />
@@ -247,23 +243,20 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201906110029461_InitialCreate.resx">
-      <DependentUpon>201906110029461_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201906130431562_Developers.resx">
+      <DependentUpon>201906130431562_Developers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201906110116277_Developers.resx">
-      <DependentUpon>201906110116277_Developers.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201906130435435_Games.resx">
+      <DependentUpon>201906130435435_Games.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201906110136157_Games.resx">
-      <DependentUpon>201906110136157_Games.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201906130437460_Genres.resx">
+      <DependentUpon>201906130437460_Genres.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201906110136589_Genres.resx">
-      <DependentUpon>201906110136589_Genres.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201906130438018_Publishers.resx">
+      <DependentUpon>201906130438018_Publishers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201906110137153_Publishers.resx">
-      <DependentUpon>201906110137153_Publishers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201906110137282_Reviews.resx">
-      <DependentUpon>201906110137282_Reviews.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201906130438207_Reviews.resx">
+      <DependentUpon>201906130438207_Reviews.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

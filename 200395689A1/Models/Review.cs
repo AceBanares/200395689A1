@@ -13,6 +13,6 @@ namespace _200395689A1.Models
         public string Subject { get; set; }
         public string Reviews { get; set; }
         [Display(Name = "Number of stars (1-5)")] [Range(1,5)]
-        public string Stars { get; set; }
+        public byte Stars { get; set; }
     }
 }

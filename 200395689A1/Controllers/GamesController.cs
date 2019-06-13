@@ -46,7 +46,7 @@ namespace _200395689A1.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "GameID,Price,Name,Description,Minimum_Requirements,Publisher,Review")] Game game)
+        public ActionResult Create([Bind(Include = "GameID,Price,Name,Description,Minimum_Requirements,Publisher,Developer,Genre,Review")] Game game)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace _200395689A1.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "GameID,Price,Name,Description,Minimum_Requirements,Publisher,Review")] Game game)
+        public ActionResult Edit([Bind(Include = "GameID,Price,Name,Description,Minimum_Requirements,Publisher,Developer,Genre,Review")] Game game)
         {
             if (ModelState.IsValid)
             {

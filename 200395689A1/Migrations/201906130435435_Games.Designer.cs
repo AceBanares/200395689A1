@@ -13,7 +13,7 @@ namespace _200395689A1.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201906110136157_Games"; }
+            get { return "201906130435435_Games"; }
         }
         
         string IMigrationMetadata.Source
