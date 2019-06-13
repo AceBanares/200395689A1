@@ -18,6 +18,22 @@ namespace _200395689A1.Migrations
                 .PrimaryKey(t => t.DeveloperID);
             
             CreateTable(
+                "dbo.Games",
+                c => new
+                    {
+                        GameID = c.Int(nullable: false, identity: true),
+                        Price = c.Double(nullable: false),
+                        Name = c.String(nullable: false),
+                        Description = c.String(nullable: false),
+                        Minimum_Requirements = c.String(),
+                        Publisher = c.String(),
+                        Developer = c.String(),
+                        Genre = c.String(),
+                        Review = c.String(),
+                    })
+                .PrimaryKey(t => t.GameID);
+            
+            CreateTable(
                 "dbo.Genres",
                 c => new
                     {
@@ -45,21 +61,18 @@ namespace _200395689A1.Migrations
                         Name = c.String(),
                         Subject = c.String(),
                         Reviews = c.String(),
-                        Stars = c.String(),
+                        Stars = c.Byte(nullable: false),
                     })
                 .PrimaryKey(t => t.ReviewID);
             
-            AddColumn("dbo.Games", "Publisher", c => c.String());
-            AddColumn("dbo.Games", "Review", c => c.String());
         }
         
         public override void Down()
         {
-            DropColumn("dbo.Games", "Review");
-            DropColumn("dbo.Games", "Publisher");
             DropTable("dbo.Reviews");
             DropTable("dbo.Publishers");
             DropTable("dbo.Genres");
+            DropTable("dbo.Games");
             DropTable("dbo.Developers");
         }
     }
