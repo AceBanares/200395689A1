@@ -9,8 +9,7 @@ namespace _200395689A1.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
-            ContextKey = "_200395689A1.Models._200395689A1Context";
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(_200395689A1.Models._200395689A1Context context)

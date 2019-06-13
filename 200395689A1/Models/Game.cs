@@ -17,9 +17,9 @@ namespace _200395689A1.Models
         [Display(Name = "Minimum Requirements")]
         public string Minimum_Requirements { get; set; }
         public string Publisher { get; set; }
-        public string[] Developer { get; set; }
+        public string Developer { get; set; }
         [Display(Name = "Genre(s) (one or more)")]
-        public string[] Genre { get; set; }
+        public string Genre { get; set; }
         [Display(Name = "Review(s) (zero or more)")]
         public string Review { get; set; }
     }
